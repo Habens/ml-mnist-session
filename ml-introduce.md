@@ -39,20 +39,26 @@ so, we hope the machine can help us. let the machine himself to learning the rel
 * It involved Probability theory, statistics, approximations, convex analysis, algorithmic complexity theory, etc...
 
 * It can do lot of things:  
-    - speech Recognition {:&.moveIn}
+    - speech recognition {:&.moveIn}
     - face recognition
     - play game
     - product recommendation
     - medical analysis
     - ...
 
+[note]
+* has the ability to learning
+* totally complexity theory
+* can do lot of things
+[/note]
+
 [slide]
 # How to implement {:&.flexbox.vleft}
 1. assume an equation: <span class="green">y = f(x)</span> {:&.moveIn}  
    <span class="yellow">f(x) = Wx + B</span>
 2. assume one pair of <span class="red">W</span>, <span class="red">B</span>
-2. apply the <span class="green">X</span> (input), <span class="green">Y</span> (output) to this equation
-4. verify
+2. apply the <span class="green">X</span> (input) to this equation, got the <span class="blue">Y_</span> (output)
+4. verify - compare the <span class="blue">Y_</span> (output) and <span class="green">Y</span> (exact one)
 5. update the <span class="red">W</span>, <span class="red">B</span> (learning)
 6. verify
 7. update the <span class="red">W</span>, <span class="red">B</span> (learning)
@@ -70,7 +76,7 @@ does that looks like to do the word problems in primary school:)
 [slide]
 # Deep Neural Network {:&.flexbox.vleft}
 * Neuron {:&.moveIn}  
-  <img src="/img/neuron.png" width="500">
+  <img src="/img/neuron.png" width="400">
   
 * Deep Neural Network  
   <img src="/img/deep-network.png">  
@@ -83,8 +89,7 @@ does that looks like to do the word problems in primary school:)
   update the W, B
 
 [note]
-let's more detail, how to implement
-DNN is one of the ways to implement the Machine Learning algorithm.
+DNN is one of the ways to implement the ML algorithm.
 DNN actually is not really deep. if the NN's calculator layer is more than one, we call it DNN :）
 
 introduce some technical terms
@@ -93,22 +98,24 @@ introduce some technical terms
 [slide]
 # Handwritten digit recognition {:&.flexbox.vleft}
 * DNN {:&.moveIn}
-    - input - 28 x 28 0/1 matrix {:&.moveIn}  
-      <img src="/img/3.png" width="180">
+    - input - 28 x 28 matrix {:&.moveIn}  
+      <img src="/img/3.png" width="140">
 
-    - output of the hidden layers - 10 possibility array  
+    - output - possibilities array  
       [0.00, 0.01, 0.01, 0.9, 0.01, 0.01, 0.02, 0.00, 0.02, 0.02]  
-      (the sum of the possibilities is 1)
 
-    - output - the prediction: the maximum possibility digit  
-      <span class="yellow">3</span>
-  
-    - verify - cross entropy
+    - verify - cross entropy  
+      compare with exact possibility  
+      [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
     
     - learning - Adam algorithm
 
 * implementation in Tensorflow  
   refer on the <span class="green">mnist.py</span>
+
+[note]
+the possibilities array size is 10, and the sum of the possibilities is 1
+[/note]
 
 [slide]
 # Thanks!
